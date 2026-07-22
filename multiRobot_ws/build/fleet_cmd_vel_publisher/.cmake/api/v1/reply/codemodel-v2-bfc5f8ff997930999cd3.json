@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-f93e486f39a87d1f19b7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fleet_cmd_vel_publisher",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "fleet_cmd_vel_publisher_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-fleet_cmd_vel_publisher_uninstall-776077dc8fa484ced348.json",
+					"name" : "fleet_cmd_vel_publisher_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "publish_fleet_cmd_vel::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-publish_fleet_cmd_vel-c54f55f282d5c8cb1c45.json",
+					"name" : "publish_fleet_cmd_vel",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-ce38801d719781f1d6cf.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-tutorial/multi_robot_lidar/multiRobot_ws/build/fleet_cmd_vel_publisher",
+		"source" : "/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-tutorial/multi_robot_lidar/multiRobot_ws/fleet_cmd_vel_publisher"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

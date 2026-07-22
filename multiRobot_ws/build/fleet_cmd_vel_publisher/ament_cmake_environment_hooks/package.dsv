@@ -1,0 +1,4 @@
+source;share/fleet_cmd_vel_publisher/local_setup.bash
+source;share/fleet_cmd_vel_publisher/local_setup.dsv
+source;share/fleet_cmd_vel_publisher/local_setup.sh
+source;share/fleet_cmd_vel_publisher/local_setup.zsh
