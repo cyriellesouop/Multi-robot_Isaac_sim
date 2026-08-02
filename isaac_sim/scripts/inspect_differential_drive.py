@@ -1,69 +1,72 @@
 """
-Fix the broken relative payload paths inside the "Physics" variantSet's
-mujoco/physics/physx options on turtlebot3_lidar.usd. Same broken-path
-pattern as the Geometry reference and differential_drive payload fixed
-earlier, but this time the payload is authored INSIDE a variant option,
-so we need Usd's variant edit context to target the right spec rather
-than editing the prim's default (outside-variant) content.
+Fix differential_drive.usd properly:
+1. Remove the stray top-level /differential_drive prim (created by an
+   earlier wrong-path edit) along with its garbage Graphs_01/Graphs_02
+   instance-path overrides.
+2. Re-copy the correct, fully-updated graph from turtlebot3_lidar.usd
+   into the CORRECT destination path this time: /Root/differential_drive
+   (nested under the Root Xform, matching this file's actual structure),
+   not /differential_drive at the top level.
 
 Usage:
-    /path/to/isaac-sim/python.sh fix_physics_variant_payloads.py \
-        --robot /path/to/turtlebot3_lidar.usd
+    /path/to/isaac-sim/python.sh fix_differential_drive_file.py --headless
 """
 
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--robot", type=str, required=True,
-                     help="Path to the robot USD file to fix, in place.")
+parser.add_argument("--headless", action="store_true")
 args = parser.parse_args()
 
 from isaacsim import SimulationApp  # noqa: E402
 
-simulation_app = SimulationApp({"headless": True})
+simulation_app = SimulationApp({"headless": args.headless})
 
-from pxr import Usd  # noqa: E402
+from pxr import Sdf  # noqa: E402
 
-ROBOT_PRIM_PATH = "/Root/turtlebot3_burger"
-PAYLOADS_DIR = ("/home/UFAD/audreycyriell.mo/Documents/HRC/turtlebot/"
-                "turtlebot3_description/urdf/tb3_burger_processed/payloads")
+SOURCE_FILE = "/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-tutorial/multi_robot_lidar/isaac_sim/assets/turtlebot3_lidar.usd"
+SOURCE_PATH = Sdf.Path("/Root/turtlebot3_burger/Graphs/differential_drive/differential_drive")
 
-# Maps each variant name to its correct absolute payload path.
-# "none" is skipped -- it has no payload to fix (empty variant).
-VARIANT_FIXES = {
-    "mujoco": f"{PAYLOADS_DIR}/Physics/mujoco.usda",
-    "physics": f"{PAYLOADS_DIR}/Physics/physics.usda",
-    "physx": f"{PAYLOADS_DIR}/Physics/physx.usda",
-}
+DEST_FILE = "/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-tutorial/differential_drive.usd"
+DEST_PATH_CORRECT = Sdf.Path("/Root/differential_drive")   # the REAL, correct path
+STRAY_PATH = Sdf.Path("/differential_drive")                 # the wrong, stray duplicate
 
-stage = Usd.Stage.Open(args.robot)
-prim = stage.GetPrimAtPath(ROBOT_PRIM_PATH)
-print(f">>> Prim valid: {prim.IsValid()}")
+dest_layer = Sdf.Layer.FindOrOpen(DEST_FILE)
+if dest_layer is None:
+    raise RuntimeError(f"Could not open {DEST_FILE}")
 
-vset = prim.GetVariantSets().GetVariantSet("Physics")
-original_selection = vset.GetVariantSelection()
-print(f">>> Original variant selection: '{original_selection}'")
+# --- Step 1: remove the stray top-level prim entirely ---
+stray_spec = dest_layer.GetPrimAtPath(STRAY_PATH)
+if stray_spec is not None:
+    print(f">>> Removing stray prim at {STRAY_PATH}")
+    parent_spec = dest_layer.GetPrimAtPath(STRAY_PATH.GetParentPath())
+    if parent_spec is not None:
+        del parent_spec.nameChildren[stray_spec.name]
+    else:
+        del dest_layer.rootPrims[stray_spec.name]
+    print(">>> Stray prim removed.")
+else:
+    print(f">>> No stray prim found at {STRAY_PATH} (already clean).")
 
-for variant_name, correct_path in VARIANT_FIXES.items():
-    print(f">>> Fixing variant '{variant_name}'...")
-    vset.SetVariantSelection(variant_name)
+# --- Step 2: re-copy the correct, fully-updated graph to the CORRECT path ---
+source_layer = Sdf.Layer.FindOrOpen(SOURCE_FILE)
+if source_layer is None:
+    raise RuntimeError(f"Could not open {SOURCE_FILE}")
 
-    with vset.GetVariantEditContext():
-        # Editing within this context targets the selected variant's own
-        # spec, not the prim's outside-variant content.
-        payloads = prim.GetPayloads()
-        current = prim.GetMetadata("payload")
-        print(f"    current payload metadata: {current}")
+source_spec = source_layer.GetPrimAtPath(SOURCE_PATH)
+if source_spec is None:
+    raise RuntimeError(f"No prim spec found at {SOURCE_PATH} in {SOURCE_FILE}")
 
-        payloads.ClearPayloads()
-        payloads.AddPayload(assetPath=correct_path)
-        print(f"    set payload to: {correct_path}")
+print(f">>> Copying {SOURCE_PATH} (from {SOURCE_FILE})")
+print(f">>>   to    {DEST_PATH_CORRECT} (in {DEST_FILE}) -- the CORRECT nested path")
 
-# Restore the original selection before saving, so nothing else changes.
-vset.SetVariantSelection(original_selection)
-print(f">>> Restored variant selection to: '{original_selection}'")
+success = Sdf.CopySpec(source_layer, SOURCE_PATH, dest_layer, DEST_PATH_CORRECT)
+print(f">>> Sdf.CopySpec succeeded: {success}")
 
-stage.GetRootLayer().Save()
-print(">>> Saved. All three variant payloads updated via USD API (binary-safe).")
+if success:
+    dest_layer.Save()
+    print(f">>> Saved {DEST_FILE}")
+else:
+    print(">>> Copy failed -- nothing was saved.")
 
 simulation_app.close()

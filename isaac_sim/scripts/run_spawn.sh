@@ -20,8 +20,8 @@ ISAAC_PYTHON="/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-standalone-6.0
 # ROS2 libraries instead, so it loads correctly. Must be set before
 # python.sh launches -- this is an OS-level library search path, not
 # something a fix inside the Python script itself can address.
-#export ROS_DISTRO=humble
-#export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+export ROS_DISTRO=humble
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
  
 # rclpy depends on two separate things, found in two separate locations,
 # resolved by two separate mechanisms:
@@ -31,14 +31,17 @@ ISAAC_PYTHON="/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-standalone-6.0
 #   2. Underlying C libraries (librcl, the RMW/DDS implementation, etc.)
 #      that the C extension links against at runtime -- needs
 #      LD_LIBRARY_PATH, the OS's shared-library search path.
-#ISAACSIM_ROS2_HUMBLE_DIR="/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-standalone-6.0.0-linux-x86_64/exts/isaacsim.ros2.core/humble"
-#export PYTHONPATH="$ISAACSIM_ROS2_HUMBLE_DIR/rclpy:$PYTHONPATH"
-#export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ISAACSIM_ROS2_HUMBLE_DIR/lib"
+ISAACSIM_ROS2_HUMBLE_DIR="/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-standalone-6.0.0-linux-x86_64/exts/isaacsim.ros2.core/humble"
+export PYTHONPATH="$ISAACSIM_ROS2_HUMBLE_DIR/rclpy:$PYTHONPATH"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ISAACSIM_ROS2_HUMBLE_DIR/lib"
  
 #echo "DEBUG: ROS_DISTRO=$ROS_DISTRO"
 #echo "DEBUG: RMW_IMPLEMENTATION=$RMW_IMPLEMENTATION"
 #echo "DEBUG: PYTHONPATH=$PYTHONPATH"
 #echo "DEBUG: LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+
+#/home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-standalone-6.0.0-linux-x86_64/python.sh open_and_edit_usd.py \
+#  --robot /home/UFAD/audreycyriell.mo/Documents/HRC/isaac-sim-tutorial/multi_robot_lidar/isaac_sim/assets/turtlebot3_lidar.usd
  
 # Directory this script lives in, so it works regardless of your current
 # working directory when you invoke it.
@@ -56,6 +59,6 @@ DEFAULT_ROBOT="$SCRIPT_DIR/../assets/turtlebot3_lidar.usd"
 
 "$ISAAC_PYTHON" "$SPAWN_SCRIPT" --env "$DEFAULT_ENV"  --robot "$DEFAULT_ROBOT" "$@"
 
-
+#"$ISAAC_PYTHON" "$SPAWN_SCRIPT" --env "$DEFAULT_ENV"  --robot "$DEFAULT_ROBOT" --output "$DEFAULT_OUTPUT" "$@"
  
  
