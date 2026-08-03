@@ -1,0 +1,15 @@
+[INFO] [launch]: All log files can be found below /home/UFAD/audreycyriell.mo/.ros/log/2026-08-02-01-25-36-393333-ece-d6200-audu-17595
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [SetNavigationGoal-1]: process started with pid [17601]
+[SetNavigationGoal-1] [INFO] [1785648337.438268653] [set_navigation_goal]: Sending initial pose
+[SetNavigationGoal-1] [INFO] [1785648347.448382674] [set_navigation_goal]: Sending first goal
+[SetNavigationGoal-1] [INFO] [1785648347.449187939] [set_navigation_goal]: Generated goal pose: [-7.048650098481597, -7.940063049914571, 0.3883967349757801, 0.8468269451575139, 0.5312194241466933, 0.40126757498852195]
+[SetNavigationGoal-1] [INFO] [1785648347.450263275] [set_navigation_goal]: Goal accepted :)
+[SetNavigationGoal-1] [INFO] [1785648458.271768001] [set_navigation_goal]: Result: nav2_msgs.action.NavigateToPose_Result(result=std_msgs.msg.Empty())
+[SetNavigationGoal-1] [INFO] [1785648458.272577723] [set_navigation_goal]: Generated goal pose: [-8.453673201235372, 0.35018666378168817, 0.2708445835640507, 0.43013085488421887, 0.06483706406238765, 0.7746993999832475]
+[SetNavigationGoal-1] [INFO] [1785648458.273525052] [set_navigation_goal]: Goal accepted :)
+[SetNavigationGoal-1] [INFO] [1785648530.274347120] [set_navigation_goal]: Result: nav2_msgs.action.NavigateToPose_Result(result=std_msgs.msg.Empty())
+[SetNavigationGoal-1] [INFO] [1785648530.275130075] [set_navigation_goal]: Generated goal pose: [-2.2182763443626943, -9.546683978802326, 0.10757305670403561, 0.09632741051750926, 0.8546492313939699, 0.4818024564559299]
+[SetNavigationGoal-1] [INFO] [1785648530.276171813] [set_navigation_goal]: Goal accepted :)
+[SetNavigationGoal-1] [INFO] [1785648594.276412460] [set_navigation_goal]: Result: nav2_msgs.action.NavigateToPose_Result(result=std_msgs.msg.Empty())
+[INFO] [SetNavigationGoal-1]: process has finished cleanly [pid 17601]

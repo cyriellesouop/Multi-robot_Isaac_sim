@@ -1,0 +1,3 @@
+robots,sensor_tier,rep,rtf,sim_time_elapsed_s,wall_time_elapsed_s,path_length_m,n_clock_msgs,n_odom_msgs,n_goals_generated,n_results,avg_goal_duration_s,goal_durations_s,completed_cleanly
+1,low,1,0.2834748066061981,76.68333333300001,270.511987471,7.152345331174523,4607,4607,3,3,82.27418915430705,110.82;72.00;64.00,True
+1,low,1,0.2840832650709299,67.68333333300001,238.25174396000003,32.18296171152261,4066,4068,3,3,3,0,1.0,73.92736959457397,107.30;46.06;68.42,True

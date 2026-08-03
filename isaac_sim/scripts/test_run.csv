@@ -1,0 +1,3 @@
+timestamp,cpu_used_percent,mem_used_mib,mem_total_mib,gpu_util_percent,gpu_mem_used_mib,gpu_mem_total_mib
+1785641590.954829344,40.48,9461,63973,36,2627,11264
+1785641592.989858127,39.80,9460,63973,40,2627,11264
