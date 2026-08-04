@@ -65,6 +65,39 @@ def classify_occupancy(pixel_value: int, free_thresh: float, occupied_thresh: fl
         return "UNKNOWN"
 
 
+def check_clearance(img, row, col, resolution, clearance_m, free_thresh, occupied_thresh):
+    """
+    Checks every pixel within `clearance_m` meters of (row, col), not just
+    the clicked pixel itself. A single free pixel next to a wall/obstacle
+    (e.g. a forklift) is not enough — the robot has a physical footprint,
+    and Nav2's costmap inflates obstacles outward, so a goal needs a real
+    clearance margin, not just a single non-occupied point.
+
+    Returns (is_clear: bool, worst_status: str, min_clearance_found_m: float)
+    """
+    radius_px = int(round(clearance_m / resolution))
+    img_height, img_width = img.shape
+
+    worst_status = "FREE"
+    found_any_non_free = False
+
+    for dr in range(-radius_px, radius_px + 1):
+        for dc in range(-radius_px, radius_px + 1):
+            if dr * dr + dc * dc > radius_px * radius_px:
+                continue  # only check within the circular radius, not a square
+            r, c = row + dr, col + dc
+            if not (0 <= r < img_height and 0 <= c < img_width):
+                # Treat out-of-bounds (near map edge) as unsafe, conservatively
+                return False, "OUT_OF_BOUNDS", 0.0
+            status = classify_occupancy(int(img[r, c]), free_thresh, occupied_thresh)
+            if status != "FREE":
+                found_any_non_free = True
+                worst_status = status if status == "OCCUPIED" else worst_status
+
+    is_clear = not found_any_non_free
+    return is_clear, worst_status, clearance_m
+
+
 def main():
     parser = argparse.ArgumentParser(description="Click the occupancy map to get world coordinates.")
     parser.add_argument("--map", required=True, help="Path to the occupancy map PNG.")
@@ -74,6 +107,11 @@ def main():
                          help="World (x, y) of the bottom-left pixel (from YAML 'origin' field).")
     parser.add_argument("--free-thresh", type=float, default=0.196, help="From YAML free_thresh (default: 0.196).")
     parser.add_argument("--occupied-thresh", type=float, default=0.65, help="From YAML occupied_thresh (default: 0.65).")
+    parser.add_argument("--clearance", type=float, default=0.3,
+                         help="Required clear radius in meters around each clicked point "
+                              "(default: 0.3m — adjust to match your robot's footprint radius "
+                              "plus a safety margin; Nova Carter's footprint is roughly 0.4m wide, "
+                              "so 0.3-0.4m clearance is a reasonable starting point).")
     args = parser.parse_args()
 
     img = cv2.imread(args.map, cv2.IMREAD_GRAYSCALE)
@@ -97,15 +135,30 @@ def main():
             )
             pixel_value = int(img[row, col])
             status = classify_occupancy(pixel_value, args.free_thresh, args.occupied_thresh)
-            picked_points.append((world_x, world_y, status))
+            is_clear, worst_status, checked_radius = check_clearance(
+                img, row, col, args.resolution, args.clearance, args.free_thresh, args.occupied_thresh
+            )
+            picked_points.append((world_x, world_y, status, is_clear))
 
             print(f"pixel=({row},{col})  world=({world_x:.3f}, {world_y:.3f})  "
-                  f"pixel_val={pixel_value}  status={status}")
+                  f"pixel_val={pixel_value}  status={status}  "
+                  f"clearance_ok({args.clearance}m)={is_clear}")
             if status != "FREE":
                 print("  ^ WARNING: not clearly free space, pick elsewhere if possible.")
+            elif not is_clear:
+                print(f"  ^ WARNING: point itself is free, but within {args.clearance}m there is "
+                      f"{worst_status} space (e.g. a nearby wall/obstacle) — not enough clearance "
+                      f"for the robot's footprint. Pick a point further from obstacles.")
 
-            # Draw a marker so you can see where you've already clicked
-            color = (0, 255, 0) if status == "FREE" else (0, 0, 255)
+            # Green = genuinely clear (point + surrounding clearance radius both OK)
+            # Orange = free pixel but insufficient clearance nearby
+            # Red = occupied/unknown at the point itself
+            if status != "FREE":
+                color = (0, 0, 255)      # red
+            elif not is_clear:
+                color = (0, 165, 255)    # orange
+            else:
+                color = (0, 255, 0)      # green
             cv2.circle(display_img, (col, row), 4, color, -1)
             cv2.imshow("Occupancy Map (click to pick goals)", display_img)
 
@@ -122,10 +175,14 @@ def main():
 
     if picked_points:
         print("\n--- Summary of picked points (world coordinates) ---")
-        for i, (x, y, status) in enumerate(picked_points, start=1):
-            print(f"{i}. x={x:.3f}  y={y:.3f}  ({status})")
+        for i, (x, y, status, is_clear) in enumerate(picked_points, start=1):
+            clear_note = "OK" if (status == "FREE" and is_clear) else "INSUFFICIENT CLEARANCE / NOT FREE"
+            print(f"{i}. x={x:.3f}  y={y:.3f}  ({status}, {clear_note})")
         print("\nFor goals.txt, format each line as:")
         print("  pose.x pose.y 0 0 0 1   (identity orientation, unit quaternion)")
+        print("\nOnly use points marked 'OK' — others risk the recovery-behavior")
+        print("collision loop seen when a goal sits too close to an obstacle")
+        print("(e.g. a forklift) despite the exact pixel being free.")
 
 
 if __name__ == "__main__":

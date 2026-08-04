@@ -1,547 +1,761 @@
-[INFO] [launch]: All log files can be found below /home/UFAD/audreycyriell.mo/.ros/log/2026-08-02-01-56-50-998771-ece-d6200-audu-19958
+[INFO] [launch]: All log files can be found below /home/UFAD/audreycyriell.mo/.ros/log/2026-08-04-01-35-02-600579-ece-d6200-audu-227950
 [INFO] [launch]: Default logging verbosity is set to INFO
-[INFO] [rviz2-1]: process started with pid [19972]
-[INFO] [component_container_isolated-2]: process started with pid [19974]
-[INFO] [pointcloud_to_laserscan_node-3]: process started with pid [19976]
-[component_container_isolated-2] [INFO] [1785650211.586140117] [nav2_container]: Load Library: /opt/ros/humble/lib/libmap_server_core.so
-[component_container_isolated-2] [INFO] [1785650211.593248781] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>
-[component_container_isolated-2] [INFO] [1785650211.593278636] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>
-[component_container_isolated-2] [INFO] [1785650211.593282169] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
-[component_container_isolated-2] [INFO] [1785650211.593284991] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
-[component_container_isolated-2] [INFO] [1785650211.601778049] [map_server]: 
+[INFO] [rviz2-1]: process started with pid [227984]
+[INFO] [component_container_isolated-2]: process started with pid [227986]
+[INFO] [pointcloud_to_laserscan_node-3]: process started with pid [227988]
+[pointcloud_to_laserscan_node-3] [INFO] [1785821703.629410299] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
+[component_container_isolated-2] [INFO] [1785821703.704447569] [nav2_container]: Load Library: /opt/ros/humble/lib/libmap_server_core.so
+[component_container_isolated-2] [INFO] [1785821703.710642277] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::CostmapFilterInfoServer>
+[component_container_isolated-2] [INFO] [1785821703.710661587] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapSaver>
+[component_container_isolated-2] [INFO] [1785821703.710680475] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-2] [INFO] [1785821703.710685097] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_map_server::MapServer>
+[component_container_isolated-2] [INFO] [1785821703.715015431] [map_server]: 
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/map_server' in container '/nav2_container'
 [component_container_isolated-2] 	map_server lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.601819998] [map_server]: Creating
-[component_container_isolated-2] [INFO] [1785650211.603869735] [nav2_container]: Load Library: /opt/ros/humble/lib/libamcl_core.so
-[component_container_isolated-2] [INFO] [1785650211.605440070] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
-[component_container_isolated-2] [INFO] [1785650211.605454699] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
-[component_container_isolated-2] [INFO] [1785650211.610142775] [amcl]: 
+[component_container_isolated-2] [INFO] [1785821703.715048334] [map_server]: Creating
+[component_container_isolated-2] [INFO] [1785821703.716832560] [nav2_container]: Load Library: /opt/ros/humble/lib/libamcl_core.so
+[component_container_isolated-2] [INFO] [1785821703.718306027] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-2] [INFO] [1785821703.718318723] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_amcl::AmclNode>
+[component_container_isolated-2] [INFO] [1785821703.722028672] [amcl]: 
 [component_container_isolated-2] 	amcl lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.610462346] [amcl]: Creating
+[component_container_isolated-2] [INFO] [1785821703.722293892] [amcl]: Creating
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/amcl' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.616007964] [nav2_container]: Load Library: /opt/ros/humble/lib/libnav2_lifecycle_manager_core.so
-[component_container_isolated-2] [INFO] [1785650211.616543603] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
-[component_container_isolated-2] [INFO] [1785650211.616569467] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
-[component_container_isolated-2] [INFO] [1785650211.621833753] [lifecycle_manager_localization]: Creating
+[component_container_isolated-2] [INFO] [1785821703.723739401] [nav2_container]: Load Library: /opt/ros/humble/lib/libnav2_lifecycle_manager_core.so
+[component_container_isolated-2] [INFO] [1785821703.724066308] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-2] [INFO] [1785821703.724076702] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-2] [INFO] [1785821703.727246952] [lifecycle_manager_localization]: Creating
+[component_container_isolated-2] [INFO] [1785821703.728248108] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/lifecycle_manager_localization' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.626975051] [lifecycle_manager_localization]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.628683214] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.628712059] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.628825016] [map_server]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.628875017] [map_io]: Loading yaml file: /home/UFAD/audreycyriell.mo/Documents/HRC/IsaacSim-ros_workspaces/humble_ws/install/carter_navigation/share/carter_navigation/maps/carter_warehouse_navigation.yaml
-[component_container_isolated-2] [INFO] [1785650211.629068595] [map_io]: resolution: 0.05
-[component_container_isolated-2] [INFO] [1785650211.629075055] [map_io]: origin[0]: -11.975
-[component_container_isolated-2] [INFO] [1785650211.629077723] [map_io]: origin[1]: -17.975
-[component_container_isolated-2] [INFO] [1785650211.629080078] [map_io]: origin[2]: 0
-[component_container_isolated-2] [INFO] [1785650211.629082708] [map_io]: free_thresh: 0.196
-[component_container_isolated-2] [INFO] [1785650211.629086234] [map_io]: occupied_thresh: 0.65
-[component_container_isolated-2] [INFO] [1785650211.629090170] [map_io]: mode: trinary
-[component_container_isolated-2] [INFO] [1785650211.629093343] [map_io]: negate: 0
-[component_container_isolated-2] [INFO] [1785650211.629222759] [map_io]: Loading image_file: /home/UFAD/audreycyriell.mo/Documents/HRC/IsaacSim-ros_workspaces/humble_ws/install/carter_navigation/share/carter_navigation/maps/carter_warehouse_navigation.png
-[component_container_isolated-2] [INFO] [1785650211.667188158] [map_io]: Read map /home/UFAD/audreycyriell.mo/Documents/HRC/IsaacSim-ros_workspaces/humble_ws/install/carter_navigation/share/carter_navigation/maps/carter_warehouse_navigation.png: 480 X 776 map @ 0.05 m/cell
-[component_container_isolated-2] [INFO] [1785650211.670389423] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.670476655] [amcl]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.670541192] [amcl]: initTransforms
-[component_container_isolated-2] [INFO] [1785650211.674756768] [amcl]: initPubSub
-[component_container_isolated-2] [INFO] [1785650211.676406557] [amcl]: Subscribed to map topic.
-[component_container_isolated-2] [INFO] [1785650211.677910328] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.678835838] [map_server]: Activating
-[component_container_isolated-2] [INFO] [1785650211.679333790] [amcl]: Received a 480 X 776 map @ 0.050 m/pix
-[component_container_isolated-2] [INFO] [1785650211.683372958] [map_server]: Creating bond (map_server) to lifecycle manager.
-[pointcloud_to_laserscan_node-3] [INFO] [1785650211.719950455] [pointcloud_to_laserscan]: Got a subscriber to laserscan, starting pointcloud subscriber
-[component_container_isolated-2] [INFO] [1785650211.785637299] [lifecycle_manager_localization]: Server map_server connected with bond.
-[component_container_isolated-2] [INFO] [1785650211.785671859] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.785797546] [amcl]: Activating
-[component_container_isolated-2] [INFO] [1785650211.785828760] [amcl]: initialPoseReceived
-[component_container_isolated-2] [INFO] [1785650211.785852227] [amcl]: Setting pose (14.600000): -6.000 -1.000 3.142
-[component_container_isolated-2] [INFO] [1785650211.786147700] [amcl]: Creating bond (amcl) to lifecycle manager.
-[component_container_isolated-2] [INFO] [1785650211.806329660] [nav2_container]: Load Library: /opt/ros/humble/lib/libcontroller_server_core.so
-[component_container_isolated-2] [INFO] [1785650211.808042614] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
-[component_container_isolated-2] [INFO] [1785650211.808063880] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
-[component_container_isolated-2] [INFO] [1785650211.814130802] [controller_server]: 
+[component_container_isolated-2] [INFO] [1785821703.729465527] [lifecycle_manager_localization]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.729489494] [lifecycle_manager_localization]: [34m[1mConfiguring map_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.729577110] [map_server]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.729673186] [map_io]: Loading yaml file: /home/UFAD/audreycyriell.mo/Documents/HRC/IsaacSim-ros_workspaces/humble_ws/install/carter_navigation/share/carter_navigation/maps/carter_warehouse_navigation.yaml
+[component_container_isolated-2] [INFO] [1785821703.729829908] [map_io]: resolution: 0.05
+[component_container_isolated-2] [INFO] [1785821703.729836181] [map_io]: origin[0]: -11.975
+[component_container_isolated-2] [INFO] [1785821703.729838891] [map_io]: origin[1]: -17.975
+[component_container_isolated-2] [INFO] [1785821703.729841243] [map_io]: origin[2]: 0
+[component_container_isolated-2] [INFO] [1785821703.729843670] [map_io]: free_thresh: 0.196
+[component_container_isolated-2] [INFO] [1785821703.729846019] [map_io]: occupied_thresh: 0.65
+[component_container_isolated-2] [INFO] [1785821703.729848606] [map_io]: mode: trinary
+[component_container_isolated-2] [INFO] [1785821703.729851368] [map_io]: negate: 0
+[component_container_isolated-2] [INFO] [1785821703.729964433] [map_io]: Loading image_file: /home/UFAD/audreycyriell.mo/Documents/HRC/IsaacSim-ros_workspaces/humble_ws/install/carter_navigation/share/carter_navigation/maps/carter_warehouse_navigation.png
+[component_container_isolated-2] [INFO] [1785821703.733185604] [nav2_container]: Load Library: /opt/ros/humble/lib/libcontroller_server_core.so
+[component_container_isolated-2] [INFO] [1785821703.734524289] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-2] [INFO] [1785821703.734537208] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_controller::ControllerServer>
+[component_container_isolated-2] [INFO] [1785821703.738908043] [controller_server]: 
 [component_container_isolated-2] 	controller_server lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.817115518] [controller_server]: Creating controller server
-[component_container_isolated-2] [INFO] [1785650211.822643523] [local_costmap.local_costmap]: 
+[component_container_isolated-2] [INFO] [1785821703.741893773] [controller_server]: Creating controller server
+[component_container_isolated-2] [INFO] [1785821703.749574226] [local_costmap.local_costmap]: 
 [component_container_isolated-2] 	local_costmap lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.823031568] [local_costmap.local_costmap]: Creating Costmap
+[component_container_isolated-2] [INFO] [1785821703.750042144] [local_costmap.local_costmap]: Creating Costmap
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/controller_server' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.824439372] [nav2_container]: Load Library: /opt/ros/humble/lib/libsmoother_server_core.so
-[component_container_isolated-2] [INFO] [1785650211.825260276] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
-[component_container_isolated-2] [INFO] [1785650211.825272439] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
-[component_container_isolated-2] [INFO] [1785650211.830528937] [smoother_server]: 
+[component_container_isolated-2] [INFO] [1785821703.752855153] [nav2_container]: Load Library: /opt/ros/humble/lib/libsmoother_server_core.so
+[component_container_isolated-2] [INFO] [1785821703.753687456] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-2] [INFO] [1785821703.753699975] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_smoother::SmootherServer>
+[component_container_isolated-2] [INFO] [1785821703.758344003] [smoother_server]: 
 [component_container_isolated-2] 	smoother_server lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.831556591] [smoother_server]: Creating smoother server
+[component_container_isolated-2] [INFO] [1785821703.758811346] [map_io]: Read map /home/UFAD/audreycyriell.mo/Documents/HRC/IsaacSim-ros_workspaces/humble_ws/install/carter_navigation/share/carter_navigation/maps/carter_warehouse_navigation.png: 480 X 776 map @ 0.05 m/cell
+[component_container_isolated-2] [INFO] [1785821703.759392919] [smoother_server]: Creating smoother server
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/smoother_server' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.832726974] [nav2_container]: Load Library: /opt/ros/humble/lib/libplanner_server_core.so
-[component_container_isolated-2] [INFO] [1785650211.833190223] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
-[component_container_isolated-2] [INFO] [1785650211.833202513] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
-[component_container_isolated-2] [INFO] [1785650211.838380237] [planner_server]: 
+[component_container_isolated-2] [INFO] [1785821703.760765667] [nav2_container]: Load Library: /opt/ros/humble/lib/libplanner_server_core.so
+[component_container_isolated-2] [INFO] [1785821703.760799612] [lifecycle_manager_localization]: [34m[1mConfiguring amcl[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.760874562] [amcl]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.760936256] [amcl]: initTransforms
+[component_container_isolated-2] [INFO] [1785821703.761317354] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-2] [INFO] [1785821703.761332280] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_planner::PlannerServer>
+[component_container_isolated-2] [INFO] [1785821703.770916627] [amcl]: initPubSub
+[component_container_isolated-2] [INFO] [1785821703.772422794] [amcl]: Subscribed to map topic.
+[component_container_isolated-2] [INFO] [1785821703.773911488] [lifecycle_manager_localization]: [34m[1mActivating map_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.774003384] [map_server]: Activating
+[component_container_isolated-2] [INFO] [1785821703.774803065] [map_server]: Creating bond (map_server) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821703.774901727] [amcl]: Received a 480 X 776 map @ 0.050 m/pix
+[component_container_isolated-2] [INFO] [1785821703.780416042] [planner_server]: 
 [component_container_isolated-2] 	planner_server lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.839425809] [planner_server]: Creating
-[component_container_isolated-2] [INFO] [1785650211.845139187] [global_costmap.global_costmap]: 
+[component_container_isolated-2] [INFO] [1785821703.782699147] [planner_server]: Creating
+[component_container_isolated-2] [INFO] [1785821703.792129624] [global_costmap.global_costmap]: 
 [component_container_isolated-2] 	global_costmap lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.845427159] [global_costmap.global_costmap]: Creating Costmap
+[component_container_isolated-2] [INFO] [1785821703.792451754] [global_costmap.global_costmap]: Creating Costmap
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/planner_server' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.847352837] [nav2_container]: Load Library: /opt/ros/humble/lib/libbehavior_server_core.so
-[component_container_isolated-2] [INFO] [1785650211.848803948] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
-[component_container_isolated-2] [INFO] [1785650211.848818619] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
-[component_container_isolated-2] [INFO] [1785650211.854434523] [behavior_server]: 
+[component_container_isolated-2] [INFO] [1785821703.794339655] [nav2_container]: Load Library: /opt/ros/humble/lib/libbehavior_server_core.so
+[component_container_isolated-2] [INFO] [1785821703.795797402] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-2] [INFO] [1785821703.795811639] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<behavior_server::BehaviorServer>
+[component_container_isolated-2] [INFO] [1785821703.801252955] [behavior_server]: 
 [component_container_isolated-2] 	behavior_server lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/behavior_server' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.856833488] [nav2_container]: Load Library: /opt/ros/humble/lib/libbt_navigator_core.so
-[component_container_isolated-2] [INFO] [1785650211.857789003] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
-[component_container_isolated-2] [INFO] [1785650211.857801798] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
-[component_container_isolated-2] [INFO] [1785650211.863968825] [bt_navigator]: 
+[component_container_isolated-2] [INFO] [1785821703.803783778] [nav2_container]: Load Library: /opt/ros/humble/lib/libbt_navigator_core.so
+[component_container_isolated-2] [INFO] [1785821703.804712056] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-2] [INFO] [1785821703.804725418] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_bt_navigator::BtNavigator>
+[component_container_isolated-2] [INFO] [1785821703.810304828] [bt_navigator]: 
 [component_container_isolated-2] 	bt_navigator lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.864013170] [bt_navigator]: Creating
+[component_container_isolated-2] [INFO] [1785821703.810336055] [bt_navigator]: Creating
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/bt_navigator' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.865514825] [nav2_container]: Load Library: /opt/ros/humble/lib/libwaypoint_follower_core.so
-[component_container_isolated-2] [INFO] [1785650211.865904535] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
-[component_container_isolated-2] [INFO] [1785650211.865917557] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
-[component_container_isolated-2] [INFO] [1785650211.872067706] [waypoint_follower]: 
+[component_container_isolated-2] [INFO] [1785821703.811644174] [nav2_container]: Load Library: /opt/ros/humble/lib/libwaypoint_follower_core.so
+[component_container_isolated-2] [INFO] [1785821703.812024484] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-2] [INFO] [1785821703.812036347] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_waypoint_follower::WaypointFollower>
+[component_container_isolated-2] [INFO] [1785821703.819400286] [waypoint_follower]: 
 [component_container_isolated-2] 	waypoint_follower lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
-[component_container_isolated-2] [INFO] [1785650211.872413457] [waypoint_follower]: Creating
+[component_container_isolated-2] [INFO] [1785821703.819724589] [waypoint_follower]: Creating
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/waypoint_follower' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.873586772] [nav2_container]: Load Library: /opt/ros/humble/lib/libvelocity_smoother_core.so
-[component_container_isolated-2] [INFO] [1785650211.874043966] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
-[component_container_isolated-2] [INFO] [1785650211.874055903] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
-[component_container_isolated-2] [INFO] [1785650211.880246028] [velocity_smoother]: 
+[component_container_isolated-2] [INFO] [1785821703.820853371] [nav2_container]: Load Library: /opt/ros/humble/lib/libvelocity_smoother_core.so
+[component_container_isolated-2] [INFO] [1785821703.821286160] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-2] [INFO] [1785821703.821296489] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_velocity_smoother::VelocitySmoother>
+[component_container_isolated-2] [INFO] [1785821703.826425476] [velocity_smoother]: 
 [component_container_isolated-2] 	velocity_smoother lifecycle node launched. 
 [component_container_isolated-2] 	Waiting on external lifecycle transitions to activate
 [component_container_isolated-2] 	See https://design.ros2.org/articles/node_lifecycle.html for more information.
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/velocity_smoother' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.881562286] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
-[component_container_isolated-2] [INFO] [1785650211.881575902] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
-[component_container_isolated-2] [INFO] [1785650211.886381850] [lifecycle_manager_navigation]: Creating
-[component_container_isolated-2] [INFO] [1785650211.888329102] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.827662894] [nav2_container]: Found class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-2] [INFO] [1785821703.827676475] [nav2_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<nav2_lifecycle_manager::LifecycleManager>
+[component_container_isolated-2] [INFO] [1785821703.832260277] [lifecycle_manager_navigation]: Creating
+[component_container_isolated-2] [INFO] [1785821703.833315615] [lifecycle_manager_navigation]: [34m[1mCreating and initializing lifecycle service clients[0m[0m
 [INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/lifecycle_manager_navigation' in container '/nav2_container'
-[component_container_isolated-2] [INFO] [1785650211.895047602] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.895086849] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.895169291] [controller_server]: Configuring controller interface
-[component_container_isolated-2] [INFO] [1785650211.895337571] [controller_server]: getting goal checker plugins..
-[component_container_isolated-2] [INFO] [1785650211.895475374] [controller_server]: Controller frequency set to 20.0000Hz
-[component_container_isolated-2] [INFO] [1785650211.895501207] [local_costmap.local_costmap]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.897554579] [lifecycle_manager_localization]: Server amcl connected with bond.
-[component_container_isolated-2] [INFO] [1785650211.897576149] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.897583936] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.897830926] [local_costmap.local_costmap]: Using plugin "hesai_voxel_layer"
-[component_container_isolated-2] [INFO] [1785650211.899591867] [local_costmap.local_costmap]: Subscribed to Topics: pointcloud
-[component_container_isolated-2] [INFO] [1785650211.902278912] [local_costmap.local_costmap]: Initialized plugin "hesai_voxel_layer"
-[component_container_isolated-2] [INFO] [1785650211.902300980] [local_costmap.local_costmap]: Using plugin "front_rplidar_obstacle_layer"
-[component_container_isolated-2] [INFO] [1785650211.902688367] [local_costmap.local_costmap]: Subscribed to Topics: scan
-[component_container_isolated-2] [INFO] [1785650211.904353697] [local_costmap.local_costmap]: Initialized plugin "front_rplidar_obstacle_layer"
-[component_container_isolated-2] [INFO] [1785650211.904369586] [local_costmap.local_costmap]: Using plugin "back_rplidar_obstacle_layer"
-[component_container_isolated-2] [INFO] [1785650211.904715320] [local_costmap.local_costmap]: Subscribed to Topics: scan
-[component_container_isolated-2] [INFO] [1785650211.906243880] [local_costmap.local_costmap]: Initialized plugin "back_rplidar_obstacle_layer"
-[component_container_isolated-2] [INFO] [1785650211.906257204] [local_costmap.local_costmap]: Using plugin "inflation_layer"
-[component_container_isolated-2] [INFO] [1785650211.906810671] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
-[component_container_isolated-2] [INFO] [1785650211.911312427] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
-[component_container_isolated-2] [INFO] [1785650211.911742994] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
-[component_container_isolated-2] [INFO] [1785650211.911933628] [controller_server]: Controller Server has goal_checker  goal checkers available.
-[component_container_isolated-2] [INFO] [1785650211.912927348] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
-[component_container_isolated-2] [INFO] [1785650211.913439122] [controller_server]: Setting transform_tolerance to 0.200000
-[component_container_isolated-2] [INFO] [1785650211.918489334] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
-[component_container_isolated-2] [INFO] [1785650211.918805909] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.918886679] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
-[component_container_isolated-2] [INFO] [1785650211.919156175] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.919223438] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
-[component_container_isolated-2] [INFO] [1785650211.919332361] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.919404545] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
-[component_container_isolated-2] [INFO] [1785650211.919697963] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.919779189] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
-[component_container_isolated-2] [INFO] [1785650211.920064429] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.920131969] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
-[component_container_isolated-2] [INFO] [1785650211.920361222] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.920430551] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
-[component_container_isolated-2] [INFO] [1785650211.920656896] [controller_server]: Critic plugin initialized
-[component_container_isolated-2] [INFO] [1785650211.920668912] [controller_server]: Controller Server has FollowPath  controllers available.
-[component_container_isolated-2] [INFO] [1785650211.924496332] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.924568838] [smoother_server]: Configuring smoother server
-[component_container_isolated-2] [INFO] [1785650211.927731614] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
-[component_container_isolated-2] [INFO] [1785650211.928104430] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
-[component_container_isolated-2] [INFO] [1785650211.930640534] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.930707242] [planner_server]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.930733365] [global_costmap.global_costmap]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.932954385] [global_costmap.global_costmap]: Using plugin "static_layer"
-[component_container_isolated-2] [INFO] [1785650211.933474744] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
-[component_container_isolated-2] [INFO] [1785650211.933771897] [global_costmap.global_costmap]: Initialized plugin "static_layer"
-[component_container_isolated-2] [INFO] [1785650211.933786065] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
-[component_container_isolated-2] [INFO] [1785650211.934129764] [global_costmap.global_costmap]: Subscribed to Topics: scan
-[component_container_isolated-2] [INFO] [1785650211.935925328] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
-[component_container_isolated-2] [INFO] [1785650211.935948635] [global_costmap.global_costmap]: Using plugin "inflation_layer"
-[component_container_isolated-2] [INFO] [1785650211.936635329] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
-[component_container_isolated-2] [INFO] [1785650211.940480462] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
-[component_container_isolated-2] [INFO] [1785650211.940505230] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
-[component_container_isolated-2] [INFO] [1785650211.940883224] [planner_server]: Planner Server has GridBased  planners available.
-[component_container_isolated-2] [INFO] [1785650211.945730529] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.945831677] [behavior_server]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.948590024] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
-[component_container_isolated-2] [INFO] [1785650211.949188895] [behavior_server]: Configuring spin
-[component_container_isolated-2] [INFO] [1785650211.952400106] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
-[component_container_isolated-2] [INFO] [1785650211.953056672] [behavior_server]: Configuring backup
-[component_container_isolated-2] [INFO] [1785650211.956562613] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
-[component_container_isolated-2] [INFO] [1785650211.957185538] [behavior_server]: Configuring drive_on_heading
-[component_container_isolated-2] [INFO] [1785650211.960165854] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
-[component_container_isolated-2] [INFO] [1785650211.960786501] [behavior_server]: Configuring wait
-[component_container_isolated-2] [INFO] [1785650211.964454141] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
-[component_container_isolated-2] [INFO] [1785650211.964540528] [bt_navigator]: Configuring
-[component_container_isolated-2] [INFO] [1785650211.967481695] [amcl]: createLaserObject
-[component_container_isolated-2] [INFO] [1785650212.005078848] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 480 X 776 at 0.050000 m/pix
-[component_container_isolated-2] [INFO] [1785650212.007651653] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
-[component_container_isolated-2] [INFO] [1785650212.007737170] [waypoint_follower]: Configuring
-[component_container_isolated-2] [INFO] [1785650212.015065076] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
-[component_container_isolated-2] [INFO] [1785650212.015638145] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
-[component_container_isolated-2] [INFO] [1785650212.015729007] [velocity_smoother]: Configuring velocity smoother
-[component_container_isolated-2] [INFO] [1785650212.018686978] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650212.018800427] [controller_server]: Activating
-[component_container_isolated-2] [INFO] [1785650212.018831494] [local_costmap.local_costmap]: Activating
-[component_container_isolated-2] [INFO] [1785650212.018844291] [local_costmap.local_costmap]: Checking transform
-[component_container_isolated-2] [INFO] [1785650212.018943937] [local_costmap.local_costmap]: start
-[component_container_isolated-2] [INFO] [1785650212.220334356] [controller_server]: Creating bond (controller_server) to lifecycle manager.
-[component_container_isolated-2] [INFO] [1785650212.322876883] [lifecycle_manager_navigation]: Server controller_server connected with bond.
-[component_container_isolated-2] [INFO] [1785650212.322918902] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650212.323097953] [smoother_server]: Activating
-[component_container_isolated-2] [INFO] [1785650212.323128589] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
-[component_container_isolated-2] [INFO] [1785650212.426009948] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
-[component_container_isolated-2] [INFO] [1785650212.426056271] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650212.426266969] [planner_server]: Activating
-[component_container_isolated-2] [INFO] [1785650212.426300981] [global_costmap.global_costmap]: Activating
-[component_container_isolated-2] [INFO] [1785650212.426308406] [global_costmap.global_costmap]: Checking transform
-[component_container_isolated-2] [INFO] [1785650212.426330251] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation at time 14.733333, but only time 15.600000 is in the buffer, when looking up transform from frame [base_link] to frame [map]
-[component_container_isolated-2] [INFO] [1785650212.926386977] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 14.883333 but the earliest data is at time 15.600000, when looking up transform from frame [base_link] to frame [map]
-[rviz2-1] [INFO] [1785650213.122674973] [rviz2]: Stereo is NOT SUPPORTED
-[rviz2-1] [INFO] [1785650213.122753434] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
-[component_container_isolated-2] [INFO] [1785650213.426387298] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 15.000000 but the earliest data is at time 15.600000, when looking up transform from frame [base_link] to frame [map]
-[rviz2-1] [INFO] [1785650213.510924142] [rviz2]: Stereo is NOT SUPPORTED
-[pointcloud_to_laserscan_node-3] [WARN] [1785650213.585946709] [pointcloud_to_laserscan]: New subscription discovered on topic '/scan', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
-[rviz2-1] [INFO] [1785650213.896710232] [rviz2]: Stereo is NOT SUPPORTED
-[component_container_isolated-2] [INFO] [1785650213.926405091] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 15.150000 but the earliest data is at time 15.600000, when looking up transform from frame [base_link] to frame [map]
-[rviz2-1] [INFO] [1785650214.290702511] [rviz2]: Trying to create a map of size 480 x 776 using 1 swatches
-[component_container_isolated-2] [INFO] [1785650214.426407230] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 15.266667 but the earliest data is at time 15.600000, when looking up transform from frame [base_link] to frame [map]
-[component_container_isolated-2] [INFO] [1785650214.926383369] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 15.416667 but the earliest data is at time 15.600000, when looking up transform from frame [base_link] to frame [map]
-[component_container_isolated-2] [INFO] [1785650215.426388822] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 15.550000 but the earliest data is at time 15.600000, when looking up transform from frame [base_link] to frame [map]
-[rviz2-1] [INFO] [1785650215.829072094] [rviz]: Message Filter dropping message: frame 'odom' at time 15.133 for reason 'discarding message because the queue is full'
-[component_container_isolated-2] [INFO] [1785650215.926417670] [global_costmap.global_costmap]: start
-[rviz2-1] [INFO] [1785650215.960675517] [rviz2]: Trying to create a map of size 480 x 776 using 1 swatches
-[component_container_isolated-2] [INFO] [1785650215.977424838] [planner_server]: Activating plugin GridBased of type NavfnPlanner
-[component_container_isolated-2] [INFO] [1785650215.978609338] [planner_server]: Creating bond (planner_server) to lifecycle manager.
-[rviz2-1] [INFO] [1785650216.021880396] [rviz]: Message Filter dropping message: frame 'odom' at time 15.183 for reason 'discarding message because the queue is full'
-[component_container_isolated-2] [INFO] [1785650216.081032045] [lifecycle_manager_navigation]: Server planner_server connected with bond.
-[component_container_isolated-2] [INFO] [1785650216.081101535] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
-[component_container_isolated-2] [INFO] [1785650216.081294310] [behavior_server]: Activating
-[component_container_isolated-2] [INFO] [1785650216.081308821] [behavior_server]: Activating spin
-[component_container_isolated-2] [INFO] [1785650216.081324525] [behavior_server]: Activating backup
-[component_container_isolated-2] [INFO] [1785650216.081331266] [behavior_server]: Activating drive_on_heading
-[component_container_isolated-2] [INFO] [1785650216.081337725] [behavior_server]: Activating wait
-[component_container_isolated-2] [INFO] [1785650216.081345592] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
-[component_container_isolated-2] [INFO] [1785650216.183935001] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
-[component_container_isolated-2] [INFO] [1785650216.183972995] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
-[component_container_isolated-2] [INFO] [1785650216.184179243] [bt_navigator]: Activating
-[component_container_isolated-2] [INFO] [1785650216.212678851] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
-[rviz2-1] [INFO] [1785650216.245389285] [rviz]: Message Filter dropping message: frame 'odom' at time 15.217 for reason 'discarding message because the queue is full'
-[component_container_isolated-2] [INFO] [1785650216.315137506] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
-[component_container_isolated-2] [INFO] [1785650216.315170811] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
-[component_container_isolated-2] [INFO] [1785650216.315392125] [waypoint_follower]: Activating
-[component_container_isolated-2] [INFO] [1785650216.315425648] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
-[component_container_isolated-2] [INFO] [1785650216.418604009] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
-[component_container_isolated-2] [INFO] [1785650216.418643309] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
-[component_container_isolated-2] [INFO] [1785650216.418840712] [velocity_smoother]: Activating
-[component_container_isolated-2] [INFO] [1785650216.418878551] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
-[rviz2-1] [INFO] [1785650216.437318297] [rviz]: Message Filter dropping message: frame 'odom' at time 15.267 for reason 'discarding message because the queue is full'
-[component_container_isolated-2] [INFO] [1785650216.522304733] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
-[component_container_isolated-2] [INFO] [1785650216.522345588] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
-[component_container_isolated-2] [INFO] [1785650216.522352873] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
-[rviz2-1] [INFO] [1785650216.629065690] [rviz]: Message Filter dropping message: frame 'odom' at time 15.333 for reason 'discarding message because the queue is full'
-[rviz2-1] [INFO] [1785650216.821177908] [rviz]: Message Filter dropping message: frame 'odom' at time 15.383 for reason 'discarding message because the queue is full'
-[rviz2-1] [INFO] [1785650217.045905206] [rviz]: Message Filter dropping message: frame 'odom' at time 15.450 for reason 'discarding message because the queue is full'
-[rviz2-1] [INFO] [1785650217.237422908] [rviz]: Message Filter dropping message: frame 'odom' at time 15.500 for reason 'discarding message because the queue is full'
-[rviz2-1] [INFO] [1785650217.430383798] [rviz]: Message Filter dropping message: frame 'odom' at time 15.550 for reason 'discarding message because the queue is full'
-[rviz2-1] [INFO] [1785650217.557934802] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.100 for reason 'discarding message because the queue is full'
-[rviz2-1] [INFO] [1785650217.558052995] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.100 for reason 'discarding message because the queue is full'
-[component_container_isolated-2] [INFO] [1785650229.420623427] [bt_navigator]: Begin navigating from current location (-6.01, -1.00) to (6.13, -5.70)
-[component_container_isolated-2] [INFO] [1785650229.461347113] [controller_server]: Received a goal, begin computing control effort.
-[component_container_isolated-2] [WARN] [1785650229.461402314] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
-[component_container_isolated-2] [INFO] [1785650230.562017714] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650231.612045465] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650232.662042639] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650233.712072881] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650234.762057064] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650235.862040436] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650236.912041630] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650237.962039460] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650239.012048954] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [WARN] [1785650239.400836522] [BehaviorTreeEngine]: Behavior Tree tick rate 50.00 was exceeded!
-[component_container_isolated-2] [WARN] [1785650239.400975045] [controller_server]: Control loop missed its desired rate of 20.0000Hz
-[component_container_isolated-2] [INFO] [1785650240.051036201] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650241.151003272] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650241.647031575] [rviz2]: Trying to create a map of size 200 x 200 using 1 swatches
-[component_container_isolated-2] [INFO] [1785650242.201038530] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650243.251045441] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650244.301064627] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650245.351043834] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650246.451037303] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650247.501040818] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650247.812956714] [rviz]: Message Filter dropping message: frame 'odom' at time 15.217 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650248.551045189] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650249.341866339] [rviz]: Message Filter dropping message: frame 'odom' at time 15.617 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650249.342074915] [rviz]: Message Filter dropping message: frame 'odom' at time 15.683 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650249.601041303] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650249.699466103] [rviz]: Message Filter dropping message: frame 'odom' at time 15.783 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650249.699533241] [rviz]: Message Filter dropping message: frame 'odom' at time 15.733 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650250.071244852] [rviz]: Message Filter dropping message: frame 'odom' at time 15.850 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650250.409893762] [rviz]: Message Filter dropping message: frame 'odom' at time 15.950 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650250.409961818] [rviz]: Message Filter dropping message: frame 'odom' at time 15.900 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650250.651042570] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650250.762562893] [rviz]: Message Filter dropping message: frame 'odom' at time 16.083 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650250.762700402] [rviz]: Message Filter dropping message: frame 'odom' at time 16.017 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650251.125893366] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650251.125977385] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650251.480645819] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.300 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650251.481311570] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.300 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650251.751045038] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650251.832710089] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650251.832790016] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650252.121014643] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.500 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650252.121122371] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.500 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650252.511750388] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.600 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650252.511885900] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.600 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650252.801039042] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650252.849682277] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.700 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650252.849769123] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.700 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650253.217441001] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650253.217528456] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650253.723368397] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.900 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650253.723451589] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 15.900 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650253.851045355] [controller_server]: Passing new path to controller.
-[rviz2-1] [INFO] [1785650254.118843786] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 16.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[rviz2-1] [INFO] [1785650254.118906673] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 16.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
-[component_container_isolated-2] [INFO] [1785650254.901039969] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650255.951037560] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650257.051039126] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650258.101060086] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650259.151039357] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650260.201036949] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650261.251042537] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650262.351053718] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650263.401039888] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650264.451056609] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650265.501046255] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650266.551066914] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650267.651041844] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650268.701043406] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650269.751041272] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650270.801038885] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650271.851043220] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650272.951039222] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650274.001039006] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650275.051036351] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650276.101036301] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650277.151037759] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650278.251050493] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650279.301040199] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650280.351044661] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650281.401043699] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650282.451043868] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650283.551040574] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650284.601044082] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650285.651046308] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650286.701038577] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650287.751046172] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650288.851040912] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650289.901060040] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650290.951040931] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650292.001040065] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650293.051036113] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650294.151060216] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650295.201039718] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650296.251049369] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650297.301040979] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650298.351043788] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650299.451035590] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650300.501038897] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650301.551018654] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650302.601037879] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650303.651038665] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650304.701037264] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650305.801043685] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650306.851043117] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650307.901066266] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650308.951035289] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650310.051045906] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650311.101042000] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650312.151036164] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650313.201391002] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650314.251039677] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650315.351037028] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650316.401061398] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650317.451077599] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650318.501041447] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650319.551042448] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650320.601070532] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650321.701017425] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650322.751042742] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650323.801063551] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650324.851045562] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650325.951039601] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650327.001028027] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650328.051040156] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650329.101038492] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650330.151036519] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650331.201684358] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650332.301037649] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650333.351055910] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650334.401165078] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650335.451039844] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650336.551043749] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650336.659201467] [controller_server]: Reached the goal!
-[component_container_isolated-2] [INFO] [1785650336.720983182] [bt_navigator]: Goal succeeded
-[component_container_isolated-2] [INFO] [1785650336.722572440] [bt_navigator]: Begin navigating from current location (6.05, -5.52) to (7.68, -8.11)
-[component_container_isolated-2] [INFO] [1785650336.763012607] [controller_server]: Received a goal, begin computing control effort.
-[component_container_isolated-2] [INFO] [1785650337.863491763] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650338.913579362] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650339.963475231] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650341.013516442] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650342.063476084] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650343.163492410] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650344.213506420] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650345.263502677] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650346.313479935] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650347.363477043] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650348.463479248] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650349.513478316] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650350.563481617] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650351.613477586] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650352.663501581] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650353.763430276] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650354.813476242] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650355.863478702] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650356.913460185] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650357.963907476] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650359.063483655] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650360.113512796] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650361.163476655] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650362.213479736] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650363.263498859] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650364.363481875] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650365.413502452] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650366.463479731] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650367.513505975] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650368.563507622] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650369.663477807] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650370.713509525] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650371.763503207] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650372.813484365] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650373.863477150] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650374.913482112] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650375.963443847] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650377.063475220] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650378.113478082] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650379.163478653] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650380.213507337] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650381.263513202] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650382.363475953] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650382.718909087] [controller_server]: Reached the goal!
-[component_container_isolated-2] [INFO] [1785650382.782788919] [bt_navigator]: Goal succeeded
-[component_container_isolated-2] [INFO] [1785650382.784366462] [bt_navigator]: Begin navigating from current location (7.62, -8.01) to (-3.44, -2.12)
-[component_container_isolated-2] [INFO] [1785650382.827241749] [controller_server]: Received a goal, begin computing control effort.
-[component_container_isolated-2] [INFO] [1785650383.927621596] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650384.977633915] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650386.027634275] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650387.077665744] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650388.127633348] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650389.227619754] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650390.277631313] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650391.327622505] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650392.377662265] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650393.427621428] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650394.527620875] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650395.577649987] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650396.627619940] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650397.677631768] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650398.727636858] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650399.827624500] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650400.877646647] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650401.927620031] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650402.977641387] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650404.027622593] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650405.127635987] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650406.177630597] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650407.227621324] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650408.277637417] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650409.327634341] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650410.427621353] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650411.477652990] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650412.527624390] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650413.577631664] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650414.627620338] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650415.727602262] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650416.777633314] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650417.827622268] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [WARN] [1785650418.825674116] [planner_server]: GridBased: failed to create plan with tolerance 0.50.
-[component_container_isolated-2] [WARN] [1785650418.825718629] [planner_server]: Planning algorithm GridBased failed to generate a valid path to (-3.44, -2.12)
-[component_container_isolated-2] [WARN] [1785650418.825726879] [planner_server]: [compute_path_to_pose] [ActionServer] Aborting handle.
-[component_container_isolated-2] [INFO] [1785650418.864692780] [global_costmap.global_costmap]: Received request to clear entirely the global_costmap
-[component_container_isolated-2] [INFO] [1785650418.977627292] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650420.027576462] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650421.127621585] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650422.177650608] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650423.227623066] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650424.277656285] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650425.327622290] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650426.427605445] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650427.477630639] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650428.527622024] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650429.577632777] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650430.627624764] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [WARN] [1785650431.177723120] [controller_server]: Resulting plan has 0 poses in it.
-[component_container_isolated-2] [WARN] [1785650431.227686769] [controller_server]: Resulting plan has 0 poses in it.
-[component_container_isolated-2] [WARN] [1785650431.277709789] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.327687666] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.377686500] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.427679919] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.477679605] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.527673839] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.577712088] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.627686825] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [WARN] [1785650431.677689896] [controller_server]: Received plan with zero length
-[component_container_isolated-2] [INFO] [1785650431.727621257] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650432.777634719] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650433.827591980] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650434.877626237] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650435.927634397] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650437.027637259] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650438.077656171] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650439.127644172] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650440.177657977] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650441.227632801] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650442.327645225] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650443.377625712] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650444.427620292] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650445.477634946] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650446.527619940] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650447.627620948] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650448.677631793] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650449.727626070] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650450.777633932] [controller_server]: Passing new path to controller.
-[component_container_isolated-2] [INFO] [1785650451.134698134] [controller_server]: Reached the goal!
-[component_container_isolated-2] [INFO] [1785650451.204669945] [bt_navigator]: Goal succeeded
+[component_container_isolated-2] [INFO] [1785821703.838429490] [lifecycle_manager_navigation]: [34m[1mStarting managed nodes bringup...[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.838452886] [lifecycle_manager_navigation]: [34m[1mConfiguring controller_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.838530339] [controller_server]: Configuring controller interface
+[component_container_isolated-2] [INFO] [1785821703.838689499] [controller_server]: getting goal checker plugins..
+[component_container_isolated-2] [INFO] [1785821703.838821367] [controller_server]: Controller frequency set to 20.0000Hz
+[component_container_isolated-2] [INFO] [1785821703.838848411] [local_costmap.local_costmap]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.840818956] [local_costmap.local_costmap]: Using plugin "hesai_voxel_layer"
+[component_container_isolated-2] [INFO] [1785821703.842614134] [local_costmap.local_costmap]: Subscribed to Topics: pointcloud
+[component_container_isolated-2] [INFO] [1785821703.845139060] [local_costmap.local_costmap]: Initialized plugin "hesai_voxel_layer"
+[component_container_isolated-2] [INFO] [1785821703.845154882] [local_costmap.local_costmap]: Using plugin "front_rplidar_obstacle_layer"
+[component_container_isolated-2] [INFO] [1785821703.845474930] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[component_container_isolated-2] [INFO] [1785821703.846932270] [local_costmap.local_costmap]: Initialized plugin "front_rplidar_obstacle_layer"
+[component_container_isolated-2] [INFO] [1785821703.846947363] [local_costmap.local_costmap]: Using plugin "back_rplidar_obstacle_layer"
+[component_container_isolated-2] [INFO] [1785821703.847348857] [local_costmap.local_costmap]: Subscribed to Topics: scan
+[component_container_isolated-2] [INFO] [1785821703.848913411] [local_costmap.local_costmap]: Initialized plugin "back_rplidar_obstacle_layer"
+[component_container_isolated-2] [INFO] [1785821703.848929212] [local_costmap.local_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-2] [INFO] [1785821703.849470255] [local_costmap.local_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-2] [INFO] [1785821703.852936457] [controller_server]: Created progress_checker : progress_checker of type nav2_controller::SimpleProgressChecker
+[component_container_isolated-2] [INFO] [1785821703.853321693] [controller_server]: Created goal checker : goal_checker of type nav2_controller::SimpleGoalChecker
+[component_container_isolated-2] [INFO] [1785821703.853526989] [controller_server]: Controller Server has goal_checker  goal checkers available.
+[component_container_isolated-2] [INFO] [1785821703.854508491] [controller_server]: Created controller : FollowPath of type dwb_core::DWBLocalPlanner
+[component_container_isolated-2] [INFO] [1785821703.855042719] [controller_server]: Setting transform_tolerance to 0.200000
+[component_container_isolated-2] [INFO] [1785821703.859812395] [controller_server]: Using critic "RotateToGoal" (dwb_critics::RotateToGoalCritic)
+[component_container_isolated-2] [INFO] [1785821703.860144715] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.860241417] [controller_server]: Using critic "Oscillation" (dwb_critics::OscillationCritic)
+[component_container_isolated-2] [INFO] [1785821703.860524187] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.860599284] [controller_server]: Using critic "BaseObstacle" (dwb_critics::BaseObstacleCritic)
+[component_container_isolated-2] [INFO] [1785821703.860721882] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.860801643] [controller_server]: Using critic "GoalAlign" (dwb_critics::GoalAlignCritic)
+[component_container_isolated-2] [INFO] [1785821703.861106010] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.861180989] [controller_server]: Using critic "PathAlign" (dwb_critics::PathAlignCritic)
+[component_container_isolated-2] [INFO] [1785821703.861473650] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.861548649] [controller_server]: Using critic "PathDist" (dwb_critics::PathDistCritic)
+[component_container_isolated-2] [INFO] [1785821703.861790935] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.861866672] [controller_server]: Using critic "GoalDist" (dwb_critics::GoalDistCritic)
+[component_container_isolated-2] [INFO] [1785821703.862108000] [controller_server]: Critic plugin initialized
+[component_container_isolated-2] [INFO] [1785821703.862121443] [controller_server]: Controller Server has FollowPath  controllers available.
+[component_container_isolated-2] [INFO] [1785821703.866082537] [lifecycle_manager_navigation]: [34m[1mConfiguring smoother_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.866176015] [smoother_server]: Configuring smoother server
+[component_container_isolated-2] [INFO] [1785821703.869224452] [smoother_server]: Created smoother : simple_smoother of type nav2_smoother::SimpleSmoother
+[component_container_isolated-2] [INFO] [1785821703.869585819] [smoother_server]: Smoother Server has simple_smoother  smoothers available.
+[component_container_isolated-2] [INFO] [1785821703.871593614] [lifecycle_manager_navigation]: [34m[1mConfiguring planner_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.871668121] [planner_server]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.871693977] [global_costmap.global_costmap]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.873718240] [global_costmap.global_costmap]: Using plugin "static_layer"
+[component_container_isolated-2] [INFO] [1785821703.874247663] [global_costmap.global_costmap]: Subscribing to the map topic (/map) with transient local durability
+[component_container_isolated-2] [INFO] [1785821703.874504535] [global_costmap.global_costmap]: Initialized plugin "static_layer"
+[component_container_isolated-2] [INFO] [1785821703.874519176] [global_costmap.global_costmap]: Using plugin "obstacle_layer"
+[component_container_isolated-2] [INFO] [1785821703.874958607] [global_costmap.global_costmap]: Subscribed to Topics: scan
+[component_container_isolated-2] [INFO] [1785821703.876567108] [global_costmap.global_costmap]: Initialized plugin "obstacle_layer"
+[component_container_isolated-2] [INFO] [1785821703.876581549] [global_costmap.global_costmap]: Using plugin "inflation_layer"
+[component_container_isolated-2] [INFO] [1785821703.877185848] [global_costmap.global_costmap]: Initialized plugin "inflation_layer"
+[component_container_isolated-2] [INFO] [1785821703.881277504] [planner_server]: Created global planner plugin GridBased of type nav2_navfn_planner/NavfnPlanner
+[component_container_isolated-2] [INFO] [1785821703.881318216] [planner_server]: Configuring plugin GridBased of type NavfnPlanner
+[component_container_isolated-2] [INFO] [1785821703.881999029] [planner_server]: Planner Server has GridBased  planners available.
+[component_container_isolated-2] [INFO] [1785821703.884790903] [lifecycle_manager_localization]: Server map_server connected with bond.
+[component_container_isolated-2] [INFO] [1785821703.884827771] [lifecycle_manager_localization]: [34m[1mActivating amcl[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.885443505] [amcl]: Activating
+[component_container_isolated-2] [INFO] [1785821703.885479210] [amcl]: initialPoseReceived
+[component_container_isolated-2] [INFO] [1785821703.885682715] [amcl]: Setting pose (1.233333): -6.000 -1.000 3.142
+[component_container_isolated-2] [INFO] [1785821703.886941132] [amcl]: Creating bond (amcl) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821703.889995896] [lifecycle_manager_navigation]: [34m[1mConfiguring behavior_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.890104202] [behavior_server]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.893349811] [behavior_server]: Creating behavior plugin spin of type nav2_behaviors/Spin
+[component_container_isolated-2] [INFO] [1785821703.893869025] [behavior_server]: Configuring spin
+[component_container_isolated-2] [INFO] [1785821703.896290011] [behavior_server]: Creating behavior plugin backup of type nav2_behaviors/BackUp
+[component_container_isolated-2] [INFO] [1785821703.896797193] [behavior_server]: Configuring backup
+[component_container_isolated-2] [INFO] [1785821703.901121694] [behavior_server]: Creating behavior plugin drive_on_heading of type nav2_behaviors/DriveOnHeading
+[component_container_isolated-2] [INFO] [1785821703.901833943] [behavior_server]: Configuring drive_on_heading
+[component_container_isolated-2] [INFO] [1785821703.906291417] [behavior_server]: Creating behavior plugin wait of type nav2_behaviors/Wait
+[component_container_isolated-2] [INFO] [1785821703.906877178] [behavior_server]: Configuring wait
+[component_container_isolated-2] [INFO] [1785821703.911173227] [lifecycle_manager_navigation]: [34m[1mConfiguring bt_navigator[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.911268288] [bt_navigator]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.944629654] [global_costmap.global_costmap]: StaticLayer: Resizing costmap to 480 X 776 at 0.050000 m/pix
+[component_container_isolated-2] [INFO] [1785821703.947201723] [lifecycle_manager_navigation]: [34m[1mConfiguring waypoint_follower[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.947277766] [waypoint_follower]: Configuring
+[component_container_isolated-2] [INFO] [1785821703.951472805] [waypoint_follower]: Created waypoint_task_executor : wait_at_waypoint of type nav2_waypoint_follower::WaitAtWaypoint
+[component_container_isolated-2] [INFO] [1785821703.951870393] [lifecycle_manager_navigation]: [34m[1mConfiguring velocity_smoother[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.951934406] [velocity_smoother]: Configuring velocity smoother
+[component_container_isolated-2] [INFO] [1785821703.953470928] [lifecycle_manager_navigation]: [34m[1mActivating controller_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.953534996] [controller_server]: Activating
+[component_container_isolated-2] [INFO] [1785821703.953554709] [local_costmap.local_costmap]: Activating
+[component_container_isolated-2] [INFO] [1785821703.953563873] [local_costmap.local_costmap]: Checking transform
+[component_container_isolated-2] [INFO] [1785821703.953634835] [local_costmap.local_costmap]: start
+[component_container_isolated-2] [INFO] [1785821703.991932219] [lifecycle_manager_localization]: Server amcl connected with bond.
+[component_container_isolated-2] [INFO] [1785821703.991967142] [lifecycle_manager_localization]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-2] [INFO] [1785821703.991983516] [lifecycle_manager_localization]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-2] [INFO] [1785821704.154643683] [controller_server]: Creating bond (controller_server) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821704.158024307] [amcl]: createLaserObject
+[component_container_isolated-2] [INFO] [1785821704.257650411] [lifecycle_manager_navigation]: Server controller_server connected with bond.
+[component_container_isolated-2] [INFO] [1785821704.257695022] [lifecycle_manager_navigation]: [34m[1mActivating smoother_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821704.257899909] [smoother_server]: Activating
+[component_container_isolated-2] [INFO] [1785821704.257928390] [smoother_server]: Creating bond (smoother_server) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821704.360420106] [lifecycle_manager_navigation]: Server smoother_server connected with bond.
+[component_container_isolated-2] [INFO] [1785821704.360473456] [lifecycle_manager_navigation]: [34m[1mActivating planner_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821704.360677212] [planner_server]: Activating
+[component_container_isolated-2] [INFO] [1785821704.360706550] [global_costmap.global_costmap]: Activating
+[component_container_isolated-2] [INFO] [1785821704.360713823] [global_costmap.global_costmap]: Checking transform
+[component_container_isolated-2] [INFO] [1785821704.360728715] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation at time 1.400000, but only time 2.300000 is in the buffer, when looking up transform from frame [base_link] to frame [map]
+[rviz2-1] [INFO] [1785821704.548306850] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-1] [INFO] [1785821704.548369069] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-1] [INFO] [1785821704.780982207] [rviz2]: Stereo is NOT SUPPORTED
+[pointcloud_to_laserscan_node-3] [WARN] [1785821704.834676854] [pointcloud_to_laserscan]: New subscription discovered on topic '/scan', requesting incompatible QoS. No messages will be sent to it. Last incompatible policy: RELIABILITY_QOS_POLICY
+[component_container_isolated-2] [INFO] [1785821704.860790911] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 1.566667 but the earliest data is at time 2.300000, when looking up transform from frame [base_link] to frame [map]
+[rviz2-1] [INFO] [1785821705.015006221] [rviz2]: Trying to create a map of size 480 x 776 using 1 swatches
+[component_container_isolated-2] [INFO] [1785821705.360792330] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 1.750000 but the earliest data is at time 2.300000, when looking up transform from frame [base_link] to frame [map]
+[component_container_isolated-2] [INFO] [1785821705.860817307] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 1.983333 but the earliest data is at time 2.300000, when looking up transform from frame [base_link] to frame [map]
+[component_container_isolated-2] [INFO] [1785821706.360745859] [global_costmap.global_costmap]: Timed out waiting for transform from base_link to map to become available, tf error: Lookup would require extrapolation into the past.  Requested time 2.150000 but the earliest data is at time 2.300000, when looking up transform from frame [base_link] to frame [map]
+[component_container_isolated-2] [INFO] [1785821706.860852891] [global_costmap.global_costmap]: start
+[rviz2-1] [INFO] [1785821706.973608449] [rviz]: Message Filter dropping message: frame 'odom' at time 1.583 for reason 'discarding message because the queue is full'
+[rviz2-1] [INFO] [1785821707.165894670] [rviz]: Message Filter dropping message: frame 'odom' at time 1.633 for reason 'discarding message because the queue is full'
+[rviz2-1] [INFO] [1785821707.357864732] [rviz]: Message Filter dropping message: frame 'odom' at time 1.750 for reason 'discarding message because the queue is full'
+[rviz2-1] [INFO] [1785821707.485950578] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.600 for reason 'discarding message because the queue is full'
+[rviz2-1] [INFO] [1785821707.486031162] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.600 for reason 'discarding message because the queue is full'
+[rviz2-1] [INFO] [1785821707.581455966] [rviz]: Message Filter dropping message: frame 'odom' at time 1.817 for reason 'discarding message because the queue is full'
+[rviz2-1] [INFO] [1785821707.875895243] [rviz2]: Trying to create a map of size 480 x 776 using 1 swatches
+[component_container_isolated-2] [INFO] [1785821707.911784748] [planner_server]: Activating plugin GridBased of type NavfnPlanner
+[component_container_isolated-2] [INFO] [1785821707.912834715] [planner_server]: Creating bond (planner_server) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821708.016964848] [lifecycle_manager_navigation]: Server planner_server connected with bond.
+[component_container_isolated-2] [INFO] [1785821708.017014278] [lifecycle_manager_navigation]: [34m[1mActivating behavior_server[0m[0m
+[component_container_isolated-2] [INFO] [1785821708.017239090] [behavior_server]: Activating
+[component_container_isolated-2] [INFO] [1785821708.017257726] [behavior_server]: Activating spin
+[component_container_isolated-2] [INFO] [1785821708.017275867] [behavior_server]: Activating backup
+[component_container_isolated-2] [INFO] [1785821708.017285401] [behavior_server]: Activating drive_on_heading
+[component_container_isolated-2] [INFO] [1785821708.017294402] [behavior_server]: Activating wait
+[component_container_isolated-2] [INFO] [1785821708.017305560] [behavior_server]: Creating bond (behavior_server) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821708.120633025] [lifecycle_manager_navigation]: Server behavior_server connected with bond.
+[component_container_isolated-2] [INFO] [1785821708.120674055] [lifecycle_manager_navigation]: [34m[1mActivating bt_navigator[0m[0m
+[component_container_isolated-2] [INFO] [1785821708.120901681] [bt_navigator]: Activating
+[component_container_isolated-2] [INFO] [1785821708.161259120] [bt_navigator]: Creating bond (bt_navigator) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821708.264755899] [lifecycle_manager_navigation]: Server bt_navigator connected with bond.
+[component_container_isolated-2] [INFO] [1785821708.264800212] [lifecycle_manager_navigation]: [34m[1mActivating waypoint_follower[0m[0m
+[component_container_isolated-2] [INFO] [1785821708.265018441] [waypoint_follower]: Activating
+[component_container_isolated-2] [INFO] [1785821708.265056476] [waypoint_follower]: Creating bond (waypoint_follower) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821708.368870835] [lifecycle_manager_navigation]: Server waypoint_follower connected with bond.
+[component_container_isolated-2] [INFO] [1785821708.368909977] [lifecycle_manager_navigation]: [34m[1mActivating velocity_smoother[0m[0m
+[component_container_isolated-2] [INFO] [1785821708.369615352] [velocity_smoother]: Activating
+[component_container_isolated-2] [INFO] [1785821708.369660026] [velocity_smoother]: Creating bond (velocity_smoother) to lifecycle manager.
+[component_container_isolated-2] [INFO] [1785821708.473697883] [lifecycle_manager_navigation]: Server velocity_smoother connected with bond.
+[component_container_isolated-2] [INFO] [1785821708.473743799] [lifecycle_manager_navigation]: [34m[1mManaged nodes are active[0m[0m
+[component_container_isolated-2] [INFO] [1785821708.473751377] [lifecycle_manager_navigation]: [34m[1mCreating bond timer...[0m[0m
+[component_container_isolated-2] [INFO] [1785821722.588586238] [bt_navigator]: Begin navigating from current location (-6.01, -1.00) to (-4.58, -2.98)
+[component_container_isolated-2] [INFO] [1785821722.629141024] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-2] [WARN] [1785821722.629190390] [controller_server]: No goal checker was specified in parameter 'current_goal_checker'. Server will use only plugin loaded goal_checker . This warning will appear once.
+[component_container_isolated-2] [INFO] [1785821723.729713466] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821724.779711008] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821725.829717402] [controller_server]: Passing new path to controller.
+[rviz2-1] [INFO] [1785821726.818645633] [rviz]: Message Filter dropping message: frame 'odom' at time 1.933 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821726.818744505] [rviz]: Message Filter dropping message: frame 'odom' at time 1.933 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-2] [INFO] [1785821726.879718907] [controller_server]: Passing new path to controller.
+[rviz2-1] [INFO] [1785821727.052734223] [rviz]: Message Filter dropping message: frame 'odom' at time 2.017 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821727.052824125] [rviz]: Message Filter dropping message: frame 'odom' at time 2.067 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821727.249983718] [rviz]: Message Filter dropping message: frame 'odom' at time 2.150 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821727.505073000] [rviz]: Message Filter dropping message: frame 'odom' at time 2.233 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821727.505127789] [rviz]: Message Filter dropping message: frame 'odom' at time 2.283 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821727.799805774] [rviz]: Message Filter dropping message: frame 'odom' at time 2.367 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-2] [INFO] [1785821727.929713554] [controller_server]: Passing new path to controller.
+[rviz2-1] [INFO] [1785821728.225825547] [rviz]: Message Filter dropping message: frame 'odom' at time 2.483 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.395773892] [rviz]: Message Filter dropping message: frame 'odom' at time 2.550 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.556941226] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.700 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.557017040] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.700 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.742926010] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.742996558] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.800 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.979306478] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.900 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821728.979906425] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 1.900 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-2] [INFO] [1785821729.029713866] [controller_server]: Passing new path to controller.
+[rviz2-1] [INFO] [1785821729.275182405] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821729.275287726] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.000 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821729.580786107] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.100 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821729.580880652] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.100 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821729.822193457] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821729.822281551] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.200 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821730.062222777] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.300 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821730.062312387] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.300 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-2] [INFO] [1785821730.079671775] [controller_server]: Passing new path to controller.
+[rviz2-1] [INFO] [1785821730.178931602] [rviz2]: Trying to create a map of size 200 x 200 using 1 swatches
+[rviz2-1] [INFO] [1785821730.242105046] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821730.242181606] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.400 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821730.473154345] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.500 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[rviz2-1] [INFO] [1785821730.473210571] [rviz]: Message Filter dropping message: frame 'front_3d_lidar' at time 2.500 for reason 'the timestamp on the message is earlier than all the data in the transform cache'
+[component_container_isolated-2] [INFO] [1785821731.129713725] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821732.179743903] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821733.229713161] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821734.329714444] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821735.379714673] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821736.429742985] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821737.479714469] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821738.529714699] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821739.629718844] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821740.679744572] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821741.729757459] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821742.779754648] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821743.035906421] [controller_server]: Reached the goal!
+[component_container_isolated-2] [INFO] [1785821743.108903088] [bt_navigator]: Goal succeeded
+[component_container_isolated-2] [INFO] [1785821743.111273975] [bt_navigator]: Begin navigating from current location (-4.78, -2.89) to (4.17, 9.38)
+[component_container_isolated-2] [INFO] [1785821743.151880571] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-2] [INFO] [1785821744.252394789] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821745.302391989] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821746.352397054] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821747.402394167] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821748.452394487] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821749.552421326] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821750.602423351] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821751.652397893] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821752.702402943] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821753.752394954] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821754.852419743] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821755.902400194] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821756.952394707] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821758.002359934] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821759.052392850] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821760.152396481] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821761.202427658] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821762.252395546] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821763.302427142] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821764.352419915] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821765.452397147] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821766.502399059] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821767.552402692] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821768.602402020] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821769.652392323] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821770.752398631] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821771.802424603] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821772.852395224] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821773.902395804] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821774.952395879] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821776.052397532] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821777.102401389] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821778.152397964] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821779.202429235] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821780.252394581] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821781.352395000] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821782.402400264] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821783.452392079] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821784.502393453] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821785.552393943] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821786.652399018] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821787.702421588] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821788.752394724] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821789.802418359] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821790.852397400] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821791.808508871] [controller_server]: Reached the goal!
+[component_container_isolated-2] [INFO] [1785821791.871468182] [bt_navigator]: Goal succeeded
+[component_container_isolated-2] [INFO] [1785821791.873161232] [bt_navigator]: Begin navigating from current location (2.17, 9.15) to (-3.58, 9.07)
+[component_container_isolated-2] [INFO] [1785821791.913630880] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-2] [INFO] [1785821793.014188609] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821794.064173600] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [ERROR] [1785821794.814470406] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.814496714] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.814561534] [PathDistCritic]: None of the 128 first of 128 (128) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.814565943] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.814628476] [PathDistCritic]: None of the 128 first of 128 (128) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.814631456] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.814705227] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.814708401] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.817222080] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.817239055] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821794.817397424] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.864458155] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.864478297] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.864503991] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.864508815] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.864540817] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.864542994] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.864574972] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.864577222] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.866493119] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.866509066] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821794.866612689] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.914425138] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.914445228] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.914474903] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.914478794] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.914507525] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.914510115] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.914541053] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.914581940] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.916616231] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.916628484] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821794.916780131] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.964434625] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.964451966] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.964476331] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.964480183] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.964505030] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821794.964507355] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.964534281] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821794.964536555] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821794.966390080] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821794.966398007] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821794.966472947] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.014415391] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.014434895] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.014460462] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.014466218] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.014491662] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.014493955] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.014528602] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.014530854] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.016865624] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.016880004] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.016983376] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.064455475] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.064476386] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.064509358] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.064514076] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.064546267] [PathDistCritic]: None of the 127 first of 127 (127) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.064548633] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.064585508] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.064588120] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.066573253] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.066586693] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.066694660] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [INFO] [1785821795.114188460] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [ERROR] [1785821795.114602092] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.114610509] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.114633560] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.114652693] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.114672061] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.114674369] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.114690871] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.114693075] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.116590462] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.116596480] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.116674212] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.164430759] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.164448767] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.164474126] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.164479832] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.164504969] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.164507168] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.164537626] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.164540238] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.166631426] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.166653012] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.166846742] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.214552810] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.214575193] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.214602067] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.214607567] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.214634723] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.214638893] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.214669286] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.214672596] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.217158080] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.217176937] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.217284535] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.264431007] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.264448678] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.264473352] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.264477190] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.264502889] [PathDistCritic]: None of the 123 first of 123 (123) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.264505153] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.264533882] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.264535860] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.266385320] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.266423209] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.266508486] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.314553497] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.314577530] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.314607900] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.314613967] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.314642250] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.314646488] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.314688143] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.314691791] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.317686008] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.317699481] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.317831589] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.364444598] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.364462996] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.364490309] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.364494876] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.364521989] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.364525097] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.364578613] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.364581045] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.366861557] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.366879524] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.366985750] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.414458956] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.414476826] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.414499786] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.414503698] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.414527028] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.414529301] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.414556746] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.414559169] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.416375383] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.416381005] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.416442234] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.464597376] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.464620766] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.464651422] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.464656645] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.464685727] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.464714819] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.464746322] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.464749937] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.467348885] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.467365320] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.467495819] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.514425031] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.514442910] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.514471076] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.514474843] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.514500214] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.514502606] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.514529461] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.514531567] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.516505043] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.516514195] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.516582482] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.564597959] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.564618986] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.564647811] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.564653382] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.564696274] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.564700291] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.564741149] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.564745147] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.567608355] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.567618833] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.567705306] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.614590152] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.614614118] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.614647287] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.614652581] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.614686383] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.614689101] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.614721751] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.614723963] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.616631710] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.616646660] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.616797772] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.664570564] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.664604588] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.664631925] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.664637602] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.664664278] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.664668298] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.664698536] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.664702574] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.668006823] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.668017640] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.668113664] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.668146997] [controller_server]: Controller patience exceeded
+[component_container_isolated-2] [WARN] [1785821795.668172626] [controller_server]: [follow_path] [ActionServer] Aborting handle.
+[component_container_isolated-2] [INFO] [1785821795.693394435] [local_costmap.local_costmap]: Received request to clear entirely the local_costmap
+[component_container_isolated-2] [INFO] [1785821795.694357137] [controller_server]: Received a goal, begin computing control effort.
+[component_container_isolated-2] [ERROR] [1785821795.755065735] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.755089881] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.755116826] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.755121028] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.755145892] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.755148187] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.755193518] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.755195900] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.757401581] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.757408437] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.757473548] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [WARN] [1785821795.757535331] [controller_server]: Control loop missed its desired rate of 20.0000Hz
+[component_container_isolated-2] [ERROR] [1785821795.757746884] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.757752451] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.757775882] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.757778757] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.757800267] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.757802498] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.757826281] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.757830076] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.759615363] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.759621059] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.759665912] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.795227205] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.795253260] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.795284421] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.795322526] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.795352610] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.795357284] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.795392744] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.795396841] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.798620497] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.798633889] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.798753969] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.845249759] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.845273758] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.845308603] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.845315558] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.845347636] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.845351653] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.845391330] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.845395007] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.848503043] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.848516791] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.848629617] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.895087551] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.895105712] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.895129463] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.895133737] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.895158540] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.895161063] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.895190525] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.895192933] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.897394464] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.897405741] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.897491332] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.945258918] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.945284799] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.945314943] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.945322399] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.945351488] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.945355555] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.945389193] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.945392739] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.948308439] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.948320329] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.948469140] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.995231920] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.995258196] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.995286813] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.995293355] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.995321570] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821795.995325700] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.995353242] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821795.995357195] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821795.998312828] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821795.998326462] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821795.998448435] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821796.045121890] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821796.045143158] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.045169003] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821796.045175074] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.045203612] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821796.045205896] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.045237780] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821796.045240085] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.047608104] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821796.047618398] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821796.047725325] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821796.095246680] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821796.095272804] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.095302138] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821796.095308319] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.095336410] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821796.095340372] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.095370446] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821796.095374025] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.097256371] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821796.097264594] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821796.097352812] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821796.145088244] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821796.145107775] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.145133996] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821796.145138721] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.145165078] [PathDistCritic]: None of the 122 first of 122 (122) points of the global plan were in the local costmap and free
+[component_container_isolated-2] [WARN] [1785821796.145188085] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.145218642] [GoalDistCritic]: None of the points of the global plan were in the local costmap.
+[component_container_isolated-2] [WARN] [1785821796.145221678] [DWBLocalPlanner]: A scoring function failed to prepare
+[component_container_isolated-2] [ERROR] [1785821796.147039088] [DWBLocalPlanner]: No valid trajectories out of 419! 
+[component_container_isolated-2] [ERROR] [1785821796.147045897] [DWBLocalPlanner]: 1.00:   PathDist/Trajectory Hits Unreachable Area.
+[component_container_isolated-2] [WARN] [1785821796.147163992] [controller_server]: No valid trajectories out of 419! 
+[component_container_isolated-2] [INFO] [1785821796.194854128] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [WARN] [1785821796.994958894] [controller_server]: Resulting plan has 0 poses in it.
+[component_container_isolated-2] [WARN] [1785821797.044954421] [controller_server]: Resulting plan has 0 poses in it.
+[component_container_isolated-2] [WARN] [1785821797.094894025] [controller_server]: Resulting plan has 0 poses in it.
+[component_container_isolated-2] [WARN] [1785821797.144947114] [controller_server]: Received plan with zero length
+[component_container_isolated-2] [WARN] [1785821797.194900406] [controller_server]: Received plan with zero length
+[component_container_isolated-2] [INFO] [1785821797.244879093] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821798.294854070] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821799.344855102] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821800.394851951] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821801.494851622] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821802.544883261] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821803.594850962] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821804.644859895] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821805.694852179] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821806.794851858] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821807.844858695] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821808.894856309] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821809.944854760] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821810.994851537] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821812.094853041] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821813.144948321] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821814.194853371] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821815.244875323] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821816.294849310] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821817.394854033] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821818.444861986] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821819.494859972] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821820.544854817] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821821.594851560] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821822.694851651] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821823.744857843] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821824.794868570] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821825.844846361] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821826.894851337] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821827.994850663] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821829.044856312] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821830.094863409] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821831.144861464] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821832.194851476] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821833.294852601] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821834.344861944] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821835.394852094] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821836.444863376] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821837.494850657] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821838.594850910] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821839.644873351] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821840.694851075] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821841.745015802] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821842.794851161] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821843.894852856] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821844.944860780] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821845.994852874] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821847.044858588] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821848.094853013] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821849.194851333] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821850.244855946] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821851.294852215] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821852.344892924] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821853.394863163] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821854.494852909] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821855.544859729] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821856.594849398] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821857.644875676] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821858.694852321] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821859.794855591] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821860.844856850] [controller_server]: Passing new path to controller.
+[component_container_isolated-2] [INFO] [1785821861.651664794] [controller_server]: Reached the goal!
+[component_container_isolated-2] [INFO] [1785821861.713410546] [bt_navigator]: Goal succeeded

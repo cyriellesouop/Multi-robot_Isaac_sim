@@ -7,10 +7,17 @@
 # trial finishes.
 #
 # Usage:
-#   ./resource_sampler.sh <output_csv_path> [interval_seconds]
+#   ./resource_sampler.sh <output_csv_path> [interval_seconds] [--append]
+#
+# By default, each run OVERWRITES <output_csv_path> if it already exists,
+# so restarting the script always starts a clean file scoped to just this
+# run. Pass --append as a third argument to instead resume/append to an
+# existing file (e.g. if you deliberately paused and are continuing the
+# same trial's recording).
 #
 # Example:
 #   ./resource_sampler.sh trial_R1_S-low_rep1_resources.csv 1
+#   ./resource_sampler.sh trial_R1_S-low_rep1_resources.csv 1 --append
 #
 # Requires: sysstat (for mpstat) -> sudo apt install sysstat
 #           nvidia-smi (comes with NVIDIA driver)
@@ -19,15 +26,23 @@ set -euo pipefail
 
 OUTFILE="${1:-resources.csv}"
 INTERVAL="${2:-1}"
+MODE="${3:-}"
 
 # Check dependencies up front so failures are obvious immediately,
 # not after the trial has already started.
 command -v mpstat >/dev/null 2>&1 || { echo "ERROR: mpstat not found. Run: sudo apt install sysstat"; exit 1; }
 command -v nvidia-smi >/dev/null 2>&1 || { echo "ERROR: nvidia-smi not found."; exit 1; }
 
-# Write header only if the file doesn't already exist (allows resuming/appending
-# safely if the script is restarted, without duplicating the header row).
-if [ ! -f "$OUTFILE" ]; then
+if [ "$MODE" = "--append" ]; then
+    if [ ! -f "$OUTFILE" ]; then
+        echo "timestamp,cpu_used_percent,mem_used_mib,mem_total_mib,gpu_util_percent,gpu_mem_used_mib,gpu_mem_total_mib" > "$OUTFILE"
+    fi
+    echo "Appending to existing file: ${OUTFILE}"
+else
+    if [ -f "$OUTFILE" ]; then
+        echo "NOTE: ${OUTFILE} already existed and will be overwritten (default behavior)."
+        echo "      Pass --append as a 3rd argument to resume/append instead."
+    fi
     echo "timestamp,cpu_used_percent,mem_used_mib,mem_total_mib,gpu_util_percent,gpu_mem_used_mib,gpu_mem_total_mib" > "$OUTFILE"
 fi
 
@@ -58,18 +73,3 @@ while true; do
 
     sleep "$INTERVAL"
 done
-
-
-# script to capture other metrics excepts the one reported by ROSBAG and this file
-
-# Terminal: /tf Hz
-#ros2 topic hz /tf > trial_R1_S-low_rep1_tf_hz.log 2>&1
-
-# Terminal: /scan Hz
-#ros2 topic hz /scan > trial_R1_S-low_rep1_scan_hz.log 2>&1
-
-# Terminal: /tf bandwidth
-#ros2 topic bw /tf > trial_R1_S-low_rep1_tf_bw.log 2>&1
-
-# Terminal: /scan bandwidth
-#ros2 topic bw /scan > trial_R1_S-low_rep1_scan_bw.log 2>&1

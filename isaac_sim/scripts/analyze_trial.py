@@ -72,9 +72,15 @@ def analyze_bag(bag_path: str):
 
     clock_records = []   # (bag_wall_time_ns, sim_time_sec)
     odom_positions = []  # (bag_wall_time_ns, x, y)
+    overall_first_wall_ns = None
+    overall_last_wall_ns = None
 
     while reader.has_next():
         topic, data, bag_wall_time_ns = reader.read_next()
+
+        if overall_first_wall_ns is None:
+            overall_first_wall_ns = bag_wall_time_ns
+        overall_last_wall_ns = bag_wall_time_ns
 
         if topic == "/clock":
             msg = deserialize_message(data, Clock)
@@ -87,17 +93,41 @@ def analyze_bag(bag_path: str):
             y = msg.pose.pose.position.y
             odom_positions.append((bag_wall_time_ns, x, y))
 
-    # --- RTF: (delta sim time) / (delta wall time) across the recording ---
+    # --- RTF: robust to sim-time resets (e.g. Isaac Sim scene reload / restart
+    #     mid-recording, which snaps /clock back toward zero). A naive
+    #     (last_sim - first_sim) comparison silently produces a meaningless
+    #     near-zero or negative value if a reset occurred anywhere in the
+    #     recording. Instead, sum only the forward (non-negative) sim-time
+    #     progress between consecutive samples, and warn if any backward
+    #     jump was detected so it's visible rather than silently absorbed.
     rtf = None
     delta_sim_s = None
     delta_wall_s = None
+    n_clock_resets = 0
     if len(clock_records) >= 2:
-        first_wall_ns, first_sim = clock_records[0]
-        last_wall_ns, last_sim = clock_records[-1]
+        first_wall_ns, _ = clock_records[0]
+        last_wall_ns, _ = clock_records[-1]
         delta_wall_s = (last_wall_ns - first_wall_ns) * 1e-9
-        delta_sim_s = last_sim - first_sim
+
+        forward_sim_progress = 0.0
+        for i in range(1, len(clock_records)):
+            prev_sim = clock_records[i - 1][1]
+            curr_sim = clock_records[i][1]
+            step = curr_sim - prev_sim
+            if step >= 0:
+                forward_sim_progress += step
+            else:
+                n_clock_resets += 1  # backward jump: reset, not real playback
+
+        delta_sim_s = forward_sim_progress
         if delta_wall_s > 0:
             rtf = delta_sim_s / delta_wall_s
+
+        if n_clock_resets > 0:
+            print(f"WARNING: {n_clock_resets} backward jump(s) detected in /clock "
+                  f"during this recording (scene reload / restart mid-recording?). "
+                  f"RTF and sim_time_elapsed_s were computed using only forward "
+                  f"progress and should be treated as approximate for this trial.")
 
     # --- Path length: sum of consecutive Euclidean distances ---
     path_length_m = None
@@ -116,6 +146,9 @@ def analyze_bag(bag_path: str):
         "path_length_m": path_length_m,
         "n_clock_msgs": len(clock_records),
         "n_odom_msgs": len(odom_positions),
+        "n_clock_resets": n_clock_resets,
+        "trial_start_epoch": overall_first_wall_ns * 1e-9 if overall_first_wall_ns is not None else None,
+        "trial_end_epoch": overall_last_wall_ns * 1e-9 if overall_last_wall_ns is not None else None,
     }
 
 
@@ -230,6 +263,65 @@ def parse_nav2_log(log_path: str):
 
 
 # ---------------------------------------------------------------------------
+# Part 4: resource usage (CPU/RAM/GPU) analysis
+# ---------------------------------------------------------------------------
+
+def analyze_resources(resources_path: str, trial_start_epoch: float, trial_end_epoch: float):
+    """
+    Reads a resource_sampler.sh CSV and computes mean/min/max CPU/GPU/RAM
+    stats, restricted to [trial_start_epoch, trial_end_epoch]. This makes
+    the function robust to a resources.csv that spans more than just this
+    trial (e.g. if the sampler was left running across multiple attempts) -
+    only samples that actually fall within the trial's real time window
+    (taken from the bag's own timestamps) are used.
+
+    Returns None for all fields if no samples fall in the window, so a
+    stale/misaligned resources file produces an obvious gap rather than a
+    silently wrong average.
+    """
+    cpu_vals, gpu_vals, gpu_mem_vals, mem_vals = [], [], [], []
+    n_total_rows = 0
+    n_in_window = 0
+
+    with open(resources_path, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            n_total_rows += 1
+            ts = float(row["timestamp"])
+            if trial_start_epoch <= ts <= trial_end_epoch:
+                n_in_window += 1
+                cpu_vals.append(float(row["cpu_used_percent"]))
+                gpu_vals.append(float(row["gpu_util_percent"]))
+                gpu_mem_vals.append(float(row["gpu_mem_used_mib"]))
+                mem_vals.append(float(row["mem_used_mib"]))
+
+    if n_in_window == 0:
+        print(f"WARNING: no resource samples fell within the trial window "
+              f"({trial_start_epoch:.1f} - {trial_end_epoch:.1f}). "
+              f"resources.csv covers {n_total_rows} rows total but none "
+              f"overlap this trial - check the sampler was running during "
+              f"this specific trial, not just at some other time.")
+        return {
+            "cpu_mean": None, "cpu_min": None, "cpu_max": None,
+            "gpu_util_mean": None, "gpu_util_min": None, "gpu_util_max": None,
+            "gpu_mem_mean": None, "ram_mean": None,
+            "n_resource_samples": 0,
+        }
+
+    return {
+        "cpu_mean": sum(cpu_vals) / len(cpu_vals),
+        "cpu_min": min(cpu_vals),
+        "cpu_max": max(cpu_vals),
+        "gpu_util_mean": sum(gpu_vals) / len(gpu_vals),
+        "gpu_util_min": min(gpu_vals),
+        "gpu_util_max": max(gpu_vals),
+        "gpu_mem_mean": sum(gpu_mem_vals) / len(gpu_mem_vals),
+        "ram_mean": sum(mem_vals) / len(mem_vals),
+        "n_resource_samples": n_in_window,
+    }
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -242,6 +334,10 @@ def main():
     parser.add_argument("--tier", required=True, help="Sensor tier (low/medium/high).")
     parser.add_argument("--rep", required=True, type=int, help="Repetition number.")
     parser.add_argument("--summary", default="results_summary.csv", help="Master summary CSV to append to.")
+    parser.add_argument("--resources", default=None,
+                         help="Optional path to a resource_sampler.sh CSV. If provided, mean/min/max "
+                              "CPU/GPU/RAM over the trial's actual time window (derived from the bag) "
+                              "are added to the summary row.")
     args = parser.parse_args()
 
     if not Path(args.bag).exists():
@@ -268,6 +364,24 @@ def main():
         nav2_results["n_succeeded"] / n_outcomes if n_outcomes > 0 else None
     )
 
+    resource_results = {
+        "cpu_mean": None, "cpu_min": None, "cpu_max": None,
+        "gpu_util_mean": None, "gpu_util_min": None, "gpu_util_max": None,
+        "gpu_mem_mean": None, "ram_mean": None, "n_resource_samples": None,
+    }
+    if args.resources:
+        if not Path(args.resources).exists():
+            print(f"WARNING: --resources path not found, skipping: {args.resources}")
+        elif bag_results["trial_start_epoch"] is None:
+            print("WARNING: could not determine trial time window from bag, skipping resource analysis.")
+        else:
+            print(f"Analyzing resources: {args.resources}")
+            resource_results = analyze_resources(
+                args.resources,
+                bag_results["trial_start_epoch"],
+                bag_results["trial_end_epoch"],
+            )
+
     avg_goal_duration = (
         sum(nav_results["goal_durations_s"]) / len(nav_results["goal_durations_s"])
         if nav_results["goal_durations_s"] else None
@@ -283,6 +397,7 @@ def main():
         "path_length_m": bag_results["path_length_m"],
         "n_clock_msgs": bag_results["n_clock_msgs"],
         "n_odom_msgs": bag_results["n_odom_msgs"],
+        "n_clock_resets": bag_results["n_clock_resets"],
         "n_goals_generated": nav_results["n_goals_generated"],
         "n_results": nav_results["n_results"],
         "n_succeeded": nav2_results["n_succeeded"],
@@ -291,6 +406,15 @@ def main():
         "avg_goal_duration_s": avg_goal_duration,
         "goal_durations_s": ";".join(f"{d:.2f}" for d in nav_results["goal_durations_s"]),
         "completed_cleanly": nav_results["completed_cleanly"],
+        "cpu_mean": resource_results["cpu_mean"],
+        "cpu_min": resource_results["cpu_min"],
+        "cpu_max": resource_results["cpu_max"],
+        "gpu_util_mean": resource_results["gpu_util_mean"],
+        "gpu_util_min": resource_results["gpu_util_min"],
+        "gpu_util_max": resource_results["gpu_util_max"],
+        "gpu_mem_mean": resource_results["gpu_mem_mean"],
+        "ram_mean": resource_results["ram_mean"],
+        "n_resource_samples": resource_results["n_resource_samples"],
     }
 
     write_header = not Path(args.summary).exists()
